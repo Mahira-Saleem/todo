@@ -1,0 +1,174 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 15px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 28px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px #00000025;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #333;
+    font-size: 28px;
+}
+
+#userEmail {
+    color: #777;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+button {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background: #667eea;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#logoutBtn {
+    background: #e74c3c;
+    flex-shrink: 0;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #667eea;
+}
+
+#addBtn {
+    font-weight: bold;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 14px;
+    background: #f7f8fc;
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+}
+
+.todo-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: #333;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.actions {
+    display: flex;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+.edit-btn {
+    background: #f0ad4e;
+}
+
+.delete-btn {
+    background: #e74c3c;
+}
+
+#todoMessage {
+    margin-bottom: 12px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+    }
+
+    .input-section {
+        gap: 7px;
+    }
+
+    #taskInput {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .todo {
+        padding: 10px;
+    }
+
+    .actions {
+        gap: 5px;
+    }
+
+    .actions button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
